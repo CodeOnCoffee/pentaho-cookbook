@@ -34,7 +34,7 @@
         var RecipeBook = Backbone.Model.extend({
           recipies: [],
           initialize: function() {
-            
+
           }
         });
 
@@ -45,7 +45,7 @@
           ingredients: [],
           steps: [],
           initialize: function() {
-            
+
           }
         });
 
@@ -71,7 +71,7 @@
                 $("#gridContainer").append(curRowEle);
               }
               curRowEle.appendChild(new RecipeView({model : this.model.get('recipes')[i]}).render().el);
-            }   
+            }
             return this;
           }
         });
@@ -88,7 +88,7 @@
 
         $(document).ready(function(){
           var book = new RecipeBook(pentahoRecipeBook);
-          (new RecipeBookView({model: book})).render();          
+          (new RecipeBookView({model: book})).render();
         })
 
     </script>
@@ -118,6 +118,7 @@
 
     <!-- links to receipe JSON definitions -->
     <script type="text/javascript" src="recipes/rhubarb-pie.js"></script>
+    <script type="text/javascript" src="recipes/rhubarb-pie2.js"></script>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -134,11 +135,11 @@
         <h1>Pentaho Cookbook</h1>
         <p>-Unique recipes from 'unique' people</p>
       </div>
-      
+
       <div class="container" id="gridContainer">
         <!-- this is where the grid of recipes is inserted -->
       </div>
-          
+
       <hr>
 
       <footer>
